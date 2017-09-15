@@ -7,24 +7,17 @@
 # Installation
 
 ```sh
-# Let's install the bot.
 cd $HOME
 git clone https://github.com/Pouya9998/bot.git
 cd bot
 chmod +x launch.sh
-./beyond.sh 
-
-
-
-
-# End ;)
+./launch.sh
+screen ./launch.sh
 ```
-
-
 
 # Developer!
 
-[SoLiD](https://github.com/Pouya9998) ([Telegram](https://t.me/Releas_Dev))
+[Pouya](https://github.com/Pouya9998) ([Telegram](https://t.me/Releas_Dev))
 
 
 ### my Website:
