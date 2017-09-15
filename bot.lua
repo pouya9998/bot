@@ -1,3 +1,7 @@
+--ReleasSource An advance Edited Eset Version 3.5
+--by @Releas_Dev
+--special tnx to #Ramin #amir
+-------------------------------------------------
 serpent = require("serpent")
 lgi = require('lgi')
 redis = require('redis')
@@ -6,9 +10,9 @@ notify = lgi.require('Notify')
 notify.init ("Telegram updates")
 chats = {}
 day = 86400
-bot_id = Your Clibot id 
-sudo_users = {Soudoes id} 
-bot_owner = Local Sudo id
+bot_id = id 
+sudo_users = {id} 
+bot_owner = id
 function is_leader(msg)
   local var = false
   if msg.sender_user_id_ == tonumber(bot_owner) then
@@ -451,7 +455,7 @@ function pinmsg(channel_id, message_id, disable_notification)
      disable_notification_ = disable_notification 
    }, dl_cb, nil) 
 end 
- -
+
 function unpinmsg(channel_id)
   tdcli_function ({
     ID = "UnpinChannelMessage",
@@ -480,13 +484,13 @@ function getBlockedUsers(offset, limit)
     limit_ = limit
   }, dl_cb, nil)
 end
- -
+ 
 function delmsg(arg,data)
   for k,v in pairs(data.messages_) do
     delete_msg(v.chat_id_,{[0] = v.id_})
   end
 end
- --
+ 
 function chat_del_user(chat_id, user_id)
   changeChatMemberStatus(chat_id, user_id, 'Editor')
 end
@@ -1754,7 +1758,15 @@ function tdcli_update_callback(data)
               send(msg.chat_id_, msg.id_, 1, '》Stour TG\n An advanced administration bot based on https://valtman.name/telegram-cli\n》Admins :\n》@Releas_Dev ➣ Founder & Developer《\n》@ultra_dev ➣ Developer《\n》@Xx_mrIRANI_xx ➣ Developer《\n @DeleteTeam 2017', 1, 'md')
             end
         end     
-                   
+
+              if text:match("^[!/#][Ww]arn$") or text:match("^اخطار$") then
+            if database:get('lang:gp:'..msg.chat_id_) then
+              send(msg.chat_id_, msg.id_, 1, 'کاربر مورد نظر اخطار گرفت', 1, 'md')
+            else
+              send(msg.chat_id_, msg.id_, 1, 'کاربر مورد نظر اخطار گرفت', 1, 'md')
+            end
+        end          
+        
         if is_admin(msg.sender_user_id_, msg.chat_id_) then
           if text:match("^[!/#][Ll]eave$") or text:match("^ترک گروه$") then
             chat_leave(msg.chat_id_, bot_id)
@@ -6034,4 +6046,4 @@ if text:match("^[!/#][Bb]roadcast (.*)$") and is_admin(msg.sender_user_id_, msg.
 		end
    
 end
--- END VERSION 3.5
+
