@@ -1,7 +1,3 @@
---ReleasSource An advance Edited Eset Version 3.5
---by @Releas_Dev
---special tnx to #Ramin #amir
--------------------------------------------------
 serpent = require("serpent")
 lgi = require('lgi')
 redis = require('redis')
@@ -10,9 +6,9 @@ notify = lgi.require('Notify')
 notify.init ("Telegram updates")
 chats = {}
 day = 86400
-bot_id = id 
-sudo_users = {id} 
-bot_owner = id
+bot_id = 435990917 
+sudo_users = {399628408} 
+bot_owner = 399628408
 function is_leader(msg)
   local var = false
   if msg.sender_user_id_ == tonumber(bot_owner) then
@@ -1745,17 +1741,17 @@ function tdcli_update_callback(data)
          
           if text:match("^[!/#]nerkh$") or text:match("^نرخ$") then
             if database:get('lang:gp:'..msg.chat_id_) then
-              send(msg.chat_id_, msg.id_, 1, '💰قـیمت ربات :\n🔴یک ماهه : 5️⃣هزار تومان\n🔵دو ماهه: 8️⃣هزار تومان\n⚫️سه ماهه : 2️⃣1️⃣هزار تومان\n⚪️دائمی :0️⃣2️⃣هزار تومان\n🌀برای خرید ربات به ربات زیر مراجعه فرمایید\n@DeleteTeamSalenot', 1, 'md')
+              send(msg.chat_id_, msg.id_, 1, '💰قـیمت ربات :\n🔴یک ماهه : 5️⃣هزار تومان\n🔵دو ماهه: 8️⃣هزار تومان\n⚫️سه ماهه : 2️⃣1️⃣هزار تومان\n⚪️دائمی :0️⃣2️⃣هزار تومان\n🌀برای خرید ربات به ربات زیر مراجعه فرمایید\n ', 1, 'md')
             else
-              send(msg.chat_id_, msg.id_, 1, '💰قـیمت ربات :\n🔴یک ماهه : 5️⃣هزار تومان\n🔵دو ماهه: 8️⃣هزار تومان\n⚫️سه ماهه : 2️⃣1️⃣هزار تومان\n⚪️دائمی :0️⃣2️⃣هزار تومان\n🌀برای خرید ربات به ربات زیر مراجعه فرمایید\n@DeleteTeamSalebot', 1, 'md')
+              send(msg.chat_id_, msg.id_, 1, '💰قـیمت ربات :\n🔴یک ماهه : 5️⃣هزار تومان\n🔵دو ماهه: 8️⃣هزار تومان\n⚫️سه ماهه : 2️⃣1️⃣هزار تومان\n⚪️دائمی :0️⃣2️⃣هزار تومان\n🌀برای خرید ربات به ربات زیر مراجعه فرمایید\n ', 1, 'md')
             end
         end     
           
           if text:match("^[!/#][Aa]bout$") or text:match("^درباره ربات$") then
             if database:get('lang:gp:'..msg.chat_id_) then
-              send(msg.chat_id_, msg.id_, 1, '》Stour TG\n An advanced administration bot based on https://valtman.name/telegram-cli\n》Admins :\n》@Releas_Dev ➣ Founder & Developer《\n》@ultra_dev ➣ Developer《\n》@Xx_mrIRANI_xx ➣ Developer《\n @DeleteTeam 2017', 1, 'md')
+              send(msg.chat_id_, msg.id_, 1, '》Stour TG\n An advanced administration bot based on https://valtman.name/telegram-cli\n》Admins :\n》@Releas_Dev ➣ Founder & Developer《\n》@ultra_dev ➣ Developer《\n》@Xx_mrIRANI_xx ➣ Developer《\nwww.releas-dev.ir   2017', 1, 'md')
             else
-              send(msg.chat_id_, msg.id_, 1, '》Stour TG\n An advanced administration bot based on https://valtman.name/telegram-cli\n》Admins :\n》@Releas_Dev ➣ Founder & Developer《\n》@ultra_dev ➣ Developer《\n》@Xx_mrIRANI_xx ➣ Developer《\n @DeleteTeam 2017', 1, 'md')
+              send(msg.chat_id_, msg.id_, 1, '》Stour TG\n An advanced administration bot based on https://valtman.name/telegram-cli\n》Admins :\n》@Releas_Dev ➣ Founder & Developer《\n》@ultra_dev ➣ Developer《\n》@Xx_mrIRANI_xx ➣ Developer《\nwww.releas-dev.ir   2017', 1, 'md')
             end
         end     
 
@@ -3263,14 +3259,14 @@ function tdcli_update_callback(data)
                 if database:get('lang:gp:'..msg.chat_id_) then
                   send(msg.chat_id_, msg.id_, 1, " Your ID : "..msg.sender_user_id_.."\n Number of messages : "..user_msgs, 1, 'md')
                 else
-                  send(msg.chat_id_, msg.id_, 1, "🆔 آیــدی شُمـا :  "..msg.sender_user_id_.."\n✔️تعداد پی ام های شُما  : "..user_msgs.."\n©کانال سازنده : @DeleteTeam", 1, 'md')
+                  send(msg.chat_id_, msg.id_, 1, "🆔 آیــدی شُمـا :  "..msg.sender_user_id_.."\n✔️تعداد پی ام های شُما  : "..user_msgs.."", 1, 'md')
                 end
               end
               if not database:get('getidstatus'..msg.chat_id_) then
                 if database:get('lang:gp:'..msg.chat_id_) then
                   send(msg.chat_id_, msg.id_, 1, " Your ID : "..msg.sender_user_id_.."\n Number of messages : "..user_msgs, 1, 'md')
                 else
-                  send(msg.chat_id_, msg.id_, 1, "🆔 آیــدی عددی شُمـا :  "..msg.sender_user_id_.."\n✔️تعداد پی ام های شُما  : "..user_msgs.."\n©کانال سازنده : @DeleteTeam", 1, 'md')
+                  send(msg.chat_id_, msg.id_, 1, "🆔 آیــدی عددی شُمـا :  "..msg.sender_user_id_.."\n✔️تعداد پی ام های شُما  : "..user_msgs.."", 1, 'md')
                 end
               end
             end
@@ -3303,14 +3299,14 @@ function tdcli_update_callback(data)
                 if database:get('lang:gp:'..msg.chat_id_) then
                   send(msg.chat_id_, msg.id_, 1, " Your ID : "..msg.sender_user_id_.."\n Number of messages : "..user_msgs, 1, 'md')
                 else
-                  send(msg.chat_id_, msg.id_, 1, "🆔 آیــدی شُمـا :  "..msg.sender_user_id_.."\n✔️تعداد پی ام های شُما  : "..user_msgs.."\n©کانال سازنده : @DeleteTeam", 1, 'md')
+                  send(msg.chat_id_, msg.id_, 1, "🆔 آیــدی شُمـا :  "..msg.sender_user_id_.."\n✔️تعداد پی ام های شُما  : "..user_msgs.."", 1, 'md')
                 end
               end
               if not database:get('getidstatus'..msg.chat_id_) then
                 if database:get('lang:gp:'..msg.chat_id_) then
                   send(msg.chat_id_, msg.id_, 1, " Your ID : "..msg.sender_user_id_.."\n Number of messages : "..user_msgs, 1, 'md')
                 else
-                  send(msg.chat_id_, msg.id_, 1, "🆔 آیــدی شُمـا :  "..msg.sender_user_id_.."\n✔️تعداد پی ام های شُما  : "..user_msgs.."\n©کانال سازنده : @DeleteTeam", 1, 'md')
+                  send(msg.chat_id_, msg.id_, 1, "🆔 آیــدی شُمـا :  "..msg.sender_user_id_.."\n✔️تعداد پی ام های شُما  : "..user_msgs.."", 1, 'md')
                 end
               end
             end
@@ -6046,4 +6042,4 @@ if text:match("^[!/#][Bb]roadcast (.*)$") and is_admin(msg.sender_user_id_, msg.
 		end
    
 end
-
+-- END VERSION 3.5
